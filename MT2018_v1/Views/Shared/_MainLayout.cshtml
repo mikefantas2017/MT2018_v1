@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/main.css")
+    @Styles.Render("~/Content/select2.min.css")
+</head>
+<body>
+    <div id = "wrapper">
+        <!-- Cabecera -->
+        <div class="container-fluid navbar-fixed-top" id="cabecera">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="~/Content/imag/signal1.jpg" height = "80" width = "100"/>
+                </div>
+                <div class="col-md-4">
+                    <h2>Mon Tool 2018</h2>
+                    <h4>Mon Tool - Versión 1.</h4>
+                </div>
+                <div class="col-md-7" style="position: absolute; bottom: 10px; right:0;" align = "right">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='@Url.Action("Main", "Home")'">Inicio</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='#'">Registro</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='#'">Iniciar sesión</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='@Url.Action("Contact", "Home")'">Contacto</button>
+                </div>
+            </div>
+        </div>
+        <!-- Contenido -->
+        <div id="contenido" align="center">
+            @RenderBody()
+        </div>
+        <!-- Pie de página -->
+        <div id="pie">
+            <div class="container-fluid text-muted">
+                <div class="col-md-3">
+                    <span>
+                        &copy; 2018 Mon Tool<br>
+                        Mon Tool - Versión 1.<br>
+                        <a href="#">Aviso de privacidad</a><br>
+                        Última actualización: 25 de enero de 2018
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @* jQuery Select2 *@
+    @Scripts.Render("~/Scripts/select2.min.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
