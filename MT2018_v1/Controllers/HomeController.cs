@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Services;
 using System.Web.Services;
+using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace MT2018_v1.Controllers
 {
@@ -37,6 +39,35 @@ namespace MT2018_v1.Controllers
 
         public ActionResult MonWindow()
         {
+            var p1 = "Alo";
+            bool connSucc = false;
+            ViewBag.Persona = p1;
+            MySqlConnection db = new MySqlConnection();
+            // Cadena de conexión, para prueba de conexión con MySQL.
+            db.ConnectionString = ConfigurationManager.ConnectionStrings["MySQLdbprueba1"].ConnectionString;
+            try
+            {
+                db.Open();
+                connSucc = true;
+                ViewBag.ConnMess = "Conexión establecida.";
+                MySqlCommand q = db.CreateCommand();
+                q.CommandType = System.Data.CommandType.Text;
+                q.CommandText = "select nombre from personas where id = 2;";
+                MySqlDataReader dr = q.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        p1 = dr.GetString(0);
+                        ViewBag.Persona = p1;
+                    }
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                ViewBag.ConnMess = "Fallo en la conexión.";
+            }
             return View();
         }
         
