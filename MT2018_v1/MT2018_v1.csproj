@@ -256,6 +256,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\libWebGL\cuon-matrix.js" />
+    <Content Include="Scripts\libWebGL\cuon-utils.js" />
+    <Content Include="Scripts\libWebGL\webgl-debug.js" />
+    <Content Include="Scripts\libWebGL\webgl-utils.js" />
+    <Content Include="Scripts\mainGL.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />

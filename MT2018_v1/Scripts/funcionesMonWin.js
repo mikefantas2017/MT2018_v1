@@ -52,6 +52,8 @@ $("#selectStruct").on("select2:select", function (e) {
         "</canvas>");
     // Desplegar la información general del modelo en el panel de información general.
     // Desplegar el modelo en el panel de visualización.
+    // displayModel();
+    displayModel();
     // Mostrar herramientas y opciones adicionales....
 });
 
@@ -61,22 +63,3 @@ $("#selectStruct").on("select2:unselect", function (e) {
     $("#panelView").css("background", "#868383");
     $("#g1").replaceWith("<div id='noLoadedModelMessage' style='height: 100%'>Ningún modelo cargado.</div>");
 });
-
-
-
-
-// $("#panelWin").append();
-
-/*var canv = $("#g1")[0];
-var cntx = canv.getContext("2d");
-cntx.font = "30px Arial";
-cntx.fillStyle = "red";
-cntx.textAlign = "center";
-cntx.fillText("Ningún modelo cargado.", canv.width/2, canv.heigth/2);
-alert("width: " + canv.width + "; height: " + canv.height);*/
-
-/*var gl = getWebGLContext(canv);
-if(!gl){
-    console.log('WebGL no soportado.');
-    return;
-}*/
