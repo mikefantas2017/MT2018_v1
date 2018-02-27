@@ -9,6 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/main.css")
     @Styles.Render("~/Content/select2.min.css")
+
 </head>
 <body>
     <div id = "wrapper">
@@ -52,6 +53,9 @@
     @Scripts.Render("~/bundles/bootstrap")
     @* jQuery Select2 *@
     @Scripts.Render("~/Scripts/select2.min.js")
+    @Scripts.Render("~/Scripts/libWebGL/webgl-utils.js")
+    @Scripts.Render("~/Scripts/libWebGL/webgl-debug.js")
+    @Scripts.Render("~/Scripts/libWebGL/cuon-utils.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

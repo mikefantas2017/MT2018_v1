@@ -42,7 +42,7 @@ $("#selectStruct").select2({
 
 // Evento de selección de select2.
 $("#selectStruct").on("select2:select", function (e) {
-    alert("Ha seleccionado el modelo " + $(this).select2("data")[0].text);
+    // alert("Ha seleccionado el modelo " + $(this).select2("data")[0].text);
     // Cargar modelo.
     // Preparar el canvas del panel de visualización.
     $("#panelView").css("background", "white");
@@ -52,7 +52,6 @@ $("#selectStruct").on("select2:select", function (e) {
         "</canvas>");
     // Desplegar la información general del modelo en el panel de información general.
     // Desplegar el modelo en el panel de visualización.
-    // displayModel();
     displayModel();
     // Mostrar herramientas y opciones adicionales....
 });
