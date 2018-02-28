@@ -4,20 +4,20 @@ Enero - Febrero, 2018.
 Funciones para la vista parcial "MonWindow".
 */
 
+var pVw = $("#panelView")[0].clientWidth;
+var pVh = $("#panelView")[0].clientHeight;
+
 // jQuery select2.
 $("#selectStruct").select2({
     placeholder: 'Seleccione un modelo',
     minimumInputLength: 0,
     allowClear: true,
     ajax: {
-        // url: $(this).data('request-url'),
         url: 'BuscaModelo',
         dataType: 'json',
         type: 'GET',
         delay: 250,
         data: function (params) {
-            // console.log($(this).data('request-url'));
-            // console.log(this.url);
             return {
                 q: params.term,
                 page: params.page
@@ -42,13 +42,12 @@ $("#selectStruct").select2({
 
 // Evento de selección de select2.
 $("#selectStruct").on("select2:select", function (e) {
-    // alert("Ha seleccionado el modelo " + $(this).select2("data")[0].text);
     // Cargar modelo.
     // Preparar el canvas del panel de visualización.
     $("#panelView").css("background", "white");
     $("#noLoadedModelMessage").replaceWith("" +
-        "<canvas id = 'g1'  style = 'width: 100%; height: 100%; background: #F2F2F2; border: 1px solid #D8D8D8'>" +
-            "El navegador no soporta el elemento canvas." +
+        "<canvas id = 'g1' width = '" + pVw + "' height = '" + pVh + "' style = 'background: #F2F2F2; border: 1px solid #D8D8D8'>" +
+            "El navegador no soporta el elemento canvas...." +
         "</canvas>");
     // Desplegar la información general del modelo en el panel de información general.
     // Desplegar el modelo en el panel de visualización.
@@ -60,5 +59,15 @@ $("#selectStruct").on("select2:select", function (e) {
 $("#selectStruct").on("select2:unselect", function (e) {
     // Volver a mostrar mensaje de no carga.
     $("#panelView").css("background", "#868383");
-    $("#g1").replaceWith("<div id='noLoadedModelMessage' style='height: 100%'>Ningún modelo cargado.</div>");
+    $("#g1").replaceWith("<table id ='noLoadedModelMessage' style='height: 100%; width: 100%'>" + 
+                            "<tbody><tr><td class='text-center'>Ningún modelo cargado.</td>" +
+                            "</tr></tbody></table>");
+});
+
+// Evento de ajuste de tamaño del panelView.
+$(window).resize(function () {
+    if ($("#g1").length == 1) {
+        pVw = $("#panelView")[0].clientWidth;
+        pVh = $("#panelView")[0].clientHeight;
+    }
 });

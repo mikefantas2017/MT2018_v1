@@ -9,13 +9,13 @@ var VSHADER_SOURCE =
 	'attribute vec4 a_Position;\n' +
 	'void main(){\n' +
 	'	gl_Position = a_Position;\n' +
-	'	gl_PointSize = 8.0;\n' +
+	'	gl_PointSize = 5.0;\n' +
 	'}\n';
 
 // Fragment shader.
 var FSHADER_SOURCE =
 	'void main(){\n' +
-	'	gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);\n' +
+	'	gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n' +
 	'}\n';
 
 function displayModel() {

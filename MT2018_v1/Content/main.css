@@ -19,7 +19,8 @@ body{
 #cabecera{
 	color: #FFFFFF;
 	height: 100px;
-	background: linear-gradient(to right, #000000, #FF4000);
+	/*background: linear-gradient(to right, #0F171C, #4A84A7);*/
+    background: #4A84A7;
 	padding:10px;
 }
 

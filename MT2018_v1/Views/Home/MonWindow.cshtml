@@ -2,14 +2,14 @@
     @Scripts.Render("~/Scripts/mainGL.js")
     @Scripts.Render("~/Scripts/funcionesMonWin.js")
 }
-<div class="container-fluid">
+<div class="container">
     <h2>Mon. Window</h2>
-    <div class="row" style="padding: 10px">
-        <div class="col-md-4" style="padding: 10px">
+    <div class="row" style="padding: 5px">
+        <div class="col-lg-4" style="padding: 10px" align="left">
             <!-- Panel de información general del modelo cargado. -->
-            <div class="panel panel-default">
-                <div class="panel-heading h3" style="background-color: #FE886F; color: white"><strong>General</strong></div>
-                <div class="panel-body" align="left">
+            <div class="panel panel-info">
+                <div class="panel-heading">General</div>
+                <div class="panel-body" >
                     <div class="form-horizontal">
                         <b>Modelo:</b>
                         <select id="selectStruct" data-request-url="BuscaModelo">
@@ -19,11 +19,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8" style="padding: 10px">
+        <div class="col-lg-8" style="padding: 10px"  align="left">
             <!-- Panel de visualización del modelo cargado. -->
-            <div class="panel panel-default" style="padding: 5px; height: 400px" id="panelWin">
+            <div class="panel panel-default" style="padding: 5px; height: 400px; width: 100%" id="panelWin">
                 <div id="panelView" class="panel-body h3" style="background: #868383; color: white; height: 100%; padding: 0px">
-                    <div id="noLoadedModelMessage" style="height: 100%">Ningún modelo cargado.</div>
+                    <table id ="noLoadedModelMessage" style="height: 100%; width: 100%">
+                        <tbody>
+                            <tr>
+                                <td class="text-center">Ningún modelo cargado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

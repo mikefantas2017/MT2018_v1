@@ -9,7 +9,6 @@
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/main.css")
     @Styles.Render("~/Content/select2.min.css")
-
 </head>
 <body>
     <div id = "wrapper">
@@ -24,10 +23,10 @@
                     <h4>Mon Tool - Versión 1.</h4>
                 </div>
                 <div class="col-md-7" style="position: absolute; bottom: 10px; right:0;" align = "right">
-                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='@Url.Action("Main", "Home")'">Inicio</button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='#'">Registro</button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='#'">Iniciar sesión</button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='@Url.Action("Contact", "Home")'">Contacto</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='@Url.Action("Main", "Home")'">Inicio</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='#'">Registro</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='#'">Iniciar sesión</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='@Url.Action("Contact", "Home")'">Contacto</button>
                 </div>
             </div>
         </div>
@@ -53,6 +52,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     @* jQuery Select2 *@
     @Scripts.Render("~/Scripts/select2.min.js")
+    @* WebGL *@
     @Scripts.Render("~/Scripts/libWebGL/webgl-utils.js")
     @Scripts.Render("~/Scripts/libWebGL/webgl-debug.js")
     @Scripts.Render("~/Scripts/libWebGL/cuon-utils.js")
