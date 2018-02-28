@@ -39,6 +39,7 @@ namespace MT2018_v1.Controllers
 
         public ActionResult MonWindow()
         {
+            // ...
             var p1 = "Alo";
             bool connSucc = false;
             ViewBag.Persona = p1;
