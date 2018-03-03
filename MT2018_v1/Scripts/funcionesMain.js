@@ -7,5 +7,6 @@ Funciones para la vista "Main".
 $(function () {
     $(".panel-info").hover(function () {
         $(this).css("cursor", "pointer");
+        $(this).toggleClass("panel-info panel-primary");
     });
 });

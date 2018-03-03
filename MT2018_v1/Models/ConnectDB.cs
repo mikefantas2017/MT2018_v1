@@ -36,6 +36,7 @@ namespace MT2018_v1.Models
                     }
                 }
                 dr.Close();
+                db.Close();
             }
             catch (Exception e)
             {

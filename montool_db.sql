@@ -20,9 +20,9 @@ create table estructura (
 
 # Datos de prueba para la tabla "estructura".
 insert into estructura (nombre, tipo, descripcion, ubicacion, activa) values 
-("Gtr 12Z8 FB789", "Irregular", "Estructura irregular, ubicada en Cd. Guerrero. Está activa.", "Vall, Cd. Guerrero", 1), 
-("Frdg WGFss er", "Iregular", "Estructura irregular, ubicada en Sn. LP. Está inactiva.", "VCarr, Sn. LP.", 0),
-("Bfts Bac545r", "Especial", "Estructura especial, ubicada en Cd. de México. Está activa.", "Cuh, Cd. México", 1)
+("Sdtr 12Z8 XB789", "Regular", "Estructura regular, ubicada en Cd. de México. Está activa.", "Centro, Cd. México", 1), 
+("Lgdv UCdfy er", "Iregular", "Estructura irregular, ubicada en Cd. de México. Está activa.", "Coy., Cd. México", 1),
+("Nnts 97885r", "Especial", "Estructura especial, ubicada en Cd. de México. Está activa.", "Centro, Cd. México", 1)
 
 
 
